@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
+      <input type="text" #serverIme>
+      <button type="button" class="btn btn-secondary" (click)="onDodajServer(serverIme.value)">Dodaj server</button>
+      <br><br>
+      <button type="button" class="btn btn-warning" (click)="zapamti()">Sacuvaj servere</button>
+      <button type="button" class="btn btn-warning" (click)="vrati()">Vrati servere</button>
+      <ul class="list-group" *ngFor="let server of serveri">
+        <li class="list-group-item">{{server.ime}} (ID: {{server.id}})</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
